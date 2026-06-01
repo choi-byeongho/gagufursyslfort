@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+
+# 생성 파일 (GitHub에 올릴 필요 없음)
+newsletter_*.html
+trends_report_*.json
+translated_report_*.json
+run.log

@@ -1,0 +1,41 @@
+name: 가구백서 뉴스레터 자동 발송
+
+on:
+  schedule:
+    # KST 08:30 = UTC 23:30 (전날)
+    # 월(KST) = 일(UTC), 화=월, 수=화, 목=수
+    - cron: '30 23 * * 0,1,2,3'
+  workflow_dispatch:  # 수동 실행 버튼
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 뉴스레터 실행
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python -X utf8 newsletter.py
+
+      - name: sent_articles.json 저장 (중복 방지)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_articles.json
+          git diff --staged --quiet || git commit -m "chore: update sent_articles $(date +'%Y-%m-%d')"
+          git push
