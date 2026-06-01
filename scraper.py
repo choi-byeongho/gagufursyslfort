@@ -12,14 +12,15 @@ CATEGORY_FEEDS = {
         "day": 0,  # 월요일 — 주거 공간에 놓이는 가구·소품
         "keywords": ["sofa", "couch", "dining table", "coffee table", "sideboard", "wardrobe", "bookshelf", "bedside", "home furniture", "living room", "bedroom furniture", "rug", "cushion", "home decor", "residential furniture"],
         "feeds": {
-            "Dezeen Furniture": "https://www.dezeen.com/furniture/feed/",
-            "Design Milk Furniture": "https://design-milk.com/category/furniture/feed/",
+            "Dezeen": "https://www.dezeen.com/feed/",
+            "Design Milk": "https://design-milk.com/feed/",
             "Remodelista": "https://www.remodelista.com/feed/",
-            "Dwell": "https://www.dwell.com/feeds/all.rss",
+            "Curbed": "https://www.curbed.com/rss/index.xml",
             "Apartment Therapy": "https://www.apartmenttherapy.com/main.rss",
             "Est Living": "https://www.estliving.com/feed/",
             "Leibal": "https://leibal.com/feed/",
-            "Sight Unseen": "https://www.sightunseen.com/feed/",
+            "Yellowtrace": "https://www.yellowtrace.com.au/feed/",
+            "The Nordroom": "https://www.thenordroom.com/feed/",
         }
     },
     "office": {
@@ -32,9 +33,9 @@ CATEGORY_FEEDS = {
             "Officelovin": "https://officelovin.com/feed/",
             "Contract Design": "https://www.contractdesign.com/feed/",
             "Work Design Mag": "https://www.workdesign.com/feed/",
-            "Dezeen Workplace": "https://www.dezeen.com/workplace/feed/",
+            "Dezeen": "https://www.dezeen.com/feed/",
             "Hospitality Design": "https://hospitalitydesign.com/feed/",
-            "Dezeen Hospitality": "https://www.dezeen.com/hospitality/feed/",
+            "Designboom": "https://www.designboom.com/architecture/feed/",
         }
     },
     "chair": {
@@ -59,10 +60,10 @@ CATEGORY_FEEDS = {
         "feeds": {
             "Dezeen Architecture": "https://www.dezeen.com/architecture/feed/",
             "ArchDaily": "https://www.archdaily.com/feed",
-            "Metropolis Magazine": "https://metropolismag.com/feed/",
+            "Designboom Architecture": "https://www.designboom.com/architecture/feed/",
             "Surface Magazine": "https://www.surfacemag.com/feed/",
             "Azure Magazine": "https://www.azuremagazine.com/feed/",
-            "Material District": "https://materialdistrict.com/feed/",
+            "Curbed": "https://www.curbed.com/rss/index.xml",
             "Architectural Digest": "https://www.architecturaldigest.com/feed/rss",
         }
     },
